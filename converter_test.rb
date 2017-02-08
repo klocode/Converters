@@ -52,12 +52,27 @@ class ConverterTest < Minitest::Test
   end
 
   def test_ounce_to_gram
-    assert Converter.new(10).ounce_to_gram == 283.50
+    assert Converter.new(10).ounce_to_gram == 283.495
   end
 
   def test_gram_to_ounce
     assert Converter.new(10).gram_to_ounce == 0.353
   end
 
+  def test_days_to_years
+    assert Converter.new(5).days_to_years == 0.014
+  end
+
+  def test_years_to_days
+    assert Converter.new(4.2).years_to_days == 1534.050
+  end
+
+  def test_pound_to_kilogram
+    assert Converter.new(10).pound_to_kilogram == 4.545
+  end
+
+  def test_kilogram_to_pound
+    assert Converter.new(10).kilogram_to_pound == 22.000
+  end
 
 end

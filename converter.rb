@@ -11,7 +11,7 @@ class Converter
  def c_to_f
   # Multiply by 9, then divide by 5, then add 32
   # For instance, 12C == 53.6F
-  (((number * 9.0)/5.0) + 32.0).round(2)
+  (((number * 9.0)/5.0) + 32.0).round(3)
  end
 
  def f_to_c
@@ -23,11 +23,11 @@ class Converter
  def quarts_to_cups
    # Four cups in a quart
    # So, 2 quarts == 8 cups
-   (number * 4.0).round(2)
+   (number * 4.0).round(3)
  end
 
  def cups_to_quarts
-   (number / 4.0).round(2)
+   (number / 4.0).round(3)
  end
 
  def inches_to_feet
@@ -54,7 +54,7 @@ class Converter
  end
 
  def miles_to_feet
-   (number * 5280.0).round(2)
+   (number * 5280.0).round(3)
  end
 
  def feet_to_meters
@@ -69,11 +69,27 @@ class Converter
 
  def ounce_to_gram
    # One ounce == 28.3495 grams
-   (number * 28.3495).round(2)
+   (number * 28.3495).round(3)
  end
 
  def gram_to_ounce
    (number / 28.3495).round(3)
+ end
+
+ def days_to_years
+   (number / 365.25).round(3)
+ end
+
+ def years_to_days
+   (number * 365.25).round(3)
+ end
+
+ def pound_to_kilogram
+   (number / 2.2).round(3)
+ end
+
+ def kilogram_to_pound
+   (number * 2.2).round(3)
  end
 
 end
